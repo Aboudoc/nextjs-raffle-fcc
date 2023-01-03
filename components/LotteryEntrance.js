@@ -65,6 +65,16 @@ export default function LotteryEntrance() {
         }
     }, [isWeb3Enabled])
 
+    // An example filter for listening for events:
+
+    // const filter = {
+    //     address: raffleAddress,
+    //     topics: [
+    //         // the name of the event, parnetheses containing the data type of each event, no spaces
+    //         utils.id("RaffleEnter(address)"),
+    //     ],
+    // }
+
     const handleSuccess = async function (tx) {
         await tx.wait(1)
         handleNewNotification(tx)
